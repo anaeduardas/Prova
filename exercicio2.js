@@ -15,9 +15,41 @@ De R$ 3.751,06 até R$ 4.664,68: 22,5%
 Acima de R$ 4.664,68: 27,5%
 */
 
-var salario = parseFloat(prompt("Digite seu salário: "));
+var salarioBruto = parseFloat(prompt("Digite seu salário: "));
 
-if (salario < 1.302){
-    var inss = salario * 0.75
-    console.log ("O salario é : " + inss);
+var descontoINSS;
+if (salarioBruto <= 1.302,0) {
+    var descontoINSS = salarioBruto * 0.075
+  } 
+else if (salarioBruto <= 2.571,29) {
+    var  descontoINSS = salarioBruto * 0.09
+  }
+else if (salarioBruto <= 3.856,94) {
+    var descontoINSS = salarioBruto * 0.12
+  } 
+else if (salarioBruto >= 3.856,94) {
+    var descontoINSS = salarioBruto * 0.14
 }
+
+if (salarioBruto <= 1.903,98) {
+    var descontoIRRF = 0
+}
+else if (salarioBruto <= 2.826,65) {
+    var descontoIRRF = salarioBruto * 0.075
+}  
+else if (salarioBruto <= 3.75105) {
+    var descontoIRRF = salarioBruto * 0.15
+}
+else if (salarioBruto <= 4.664,68) {
+    var descontoIRRF = salarioBruto * 0.225
+} 
+else if (salarioBruto >= 4.664,68) {
+    var descontoIRRF = salarioBruto * 0.275
+}
+
+var valorLiquido = salarioBruto - descontoINSS - descontoIRRF;
+
+console.log("Salário Bruto: R$ " + salarioBruto);
+console.log("Desconto INSS: R$ " + descontoINSS);
+console.log("Desconto IRRF: R$ " + descontoIRRF);
+console.log("Salário Líquido: R$ " + valorLiquido);

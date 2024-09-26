@@ -2,16 +2,20 @@
  Informe se o aluno foi aprovado (média ≥ 7) em recuperação (5 ≤ média < 7) ou reprovado (média < 5).
 */
 
-var nota = parseFloat(prompt("Digite suas notas: "));
+var nota1 = parseFloat(prompt("Digite nota 1: "));
+var nota2 = parseFloat(prompt("Digite nota 2: "));
+var nota3 = parseFloat(prompt("Digite nota 3: "));
+var nota4 = parseFloat(prompt("Digite nota 4: "));
 
-if (nota >= 7){
-    console.log("aprovado!");
-}
-else if (nota = 5 < 7  ){
-    console.log ("recuperação!");
-}
-else if (nota <= 5 ){
-    console.log (" Reprovado :( ");
-}
+var media = (nota1 + nota2 + nota3 + nota4) / 4
 
+if (media >= 7 ){
+    console.log("Aprovado!" + " média: " + media);
+}
+else if (media <= 6.9 ){
+    console.log("O aluno está em recuperação!" + " média: " + media);
+}
+else if (media <= 5){
+    console.log("O aluno foi reprovado!" + " média: " + media);
+}
 
