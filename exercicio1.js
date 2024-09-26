@@ -8,22 +8,25 @@ e acima (22,5%).
  Apresente o valor digitado e o valor do imposto a ser pago.
 */
 
-var rendaAnual = parseFloat(prompt("Digite sua Renda Anual: "));
+var rendaAnual = prompt("Digite sua Renda Anual: ");
 var imposto;
 
-if (rendaAnual <= 22.847,76){
-    var imposto = 0
+if (rendaAnual == 22.847,76){
     console.log ("isento");
 }
-else if (rendaAnual <= 33.919,80){
-    var imposto = (rendaAnual * 0.075);
-}
-else if (rendaAnual <= 45.012,60){
-    var imposto = (rendaAnual * 0.15);
-}
-else if (rendaAnual >= 45.012,60){
-    var imposto = (rendaAnual *  0.225);
-}
+    else if (rendaAnual >= 33.919){
+        imposto = rendaAnual * 0.075;
+        console.log("Renda Anual: R$ " + rendaAnual);
+        console.log("Imposto a pagar: R$ " + imposto);
+    }
+        else if (rendaAnual >= 45.012){
+            imposto = rendaAnual * 0.15;
+            console.log("Renda Anual: R$ " + rendaAnual);
+            console.log("Imposto a pagar: R$ " + imposto);
+        }
+            else if (rendaAnual >= 45.012){
+                imposto = rendaAnual *  0.225;
+                console.log("Renda Anual: R$ " + rendaAnual);
+                console.log("Imposto a pagar: R$ " + imposto);
+            }
 
-console.log("Renda Anual: R$ " + rendaAnual);
-console.log("Imposto a pagar: R$ " + imposto);
